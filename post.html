@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Read articles and comments on DevBlog.">
+
+<title>Article | DevBlog</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="post.js" defer></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+<nav class="navbar" aria-label="Main navigation">
+<a href="index.html" class="logo">DevBlog</a>
+
+<a href="index.html">Back to articles</a>
+</nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+
+<!-- ARTICLE SECTION -->
+<section class="article-section"
+aria-labelledby="article-heading">
+
+<div class="article-container">
+
+<a href="index.html" class="back-link">
+← Back to all articles
+</a>
+
+<h1 id="article-heading">Article</h1>
+
+<p id="article-status"
+role="status"
+aria-live="polite">
+Loading article...
+</p>
+
+<p id="article-error"
+role="alert"
+hidden></p>
+
+<article id="article-content"
+class="article-content"
+aria-busy="true">
+</article>
+
+</div>
+</section>
+
+<!-- COMMENTS SECTION -->
+<section class="comments-section"
+aria-labelledby="comments-heading">
+
+<div class="comments-container">
+
+<h2 id="comments-heading">Comments</h2>
+
+<p id="comments-status"
+role="status"
+aria-live="polite">
+Loading comments...
+</p>
+
+<p id="comments-error"
+role="alert"
+hidden></p>
+
+<div id="comments-list"
+class="comments-list"
+aria-busy="true">
+</div>
+
+</div>
+</section>
+
+<!-- ADD COMMENT SECTION -->
+<section class="add-comment-section"
+aria-labelledby="add-comment-heading">
+
+<div class="form-container">
+
+<h2 id="add-comment-heading">
+Leave a comment
+</h2>
+
+<form id="comment-form">
+
+<div class="form-group">
+<label for="comment-user-id">
+User ID
+</label>
+
+<input
+type="number"
+id="comment-user-id"
+name="userId"
+min="1"
+required
+>
+</div>
+
+<div class="form-group">
+<label for="comment-body">
+Your comment
+</label>
+
+<textarea
+id="comment-body"
+name="body"
+rows="5"
+placeholder="Write your comment..."
+required
+></textarea>
+</div>
+
+<button type="submit">
+Post Comment
+</button>
+
+</form>
+
+<p id="comment-form-message"
+role="status"
+aria-live="polite">
+</p>
+
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+<p>&copy; 2026 DevBlog. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
