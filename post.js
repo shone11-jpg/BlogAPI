@@ -117,7 +117,7 @@ function renderComments(comments){
                 <p>Likes: ${comment.likes}</p>
             </div>
         `; 
-    });
+    }); 
 }
 
 
@@ -157,7 +157,7 @@ commentsList.innerHTML += `
 `
 
 commentsStatus.textContent = "";
-commentMessage.textContent = "Comment added successfully!";
+commentMessage.textContent = "Comment added successfully!"; 
 
 commentForm.reset();
 
@@ -207,6 +207,10 @@ async function deletePost(){
         }
         const data = await response.json();
         console.log("Deleted post:", data);
+        if(data.isDeleted){
+            articleContent.innerHTML = 
+            "<p>Article deleted successfully.</p>";
+        }
     }catch (error){
         console.error(error);
     }
